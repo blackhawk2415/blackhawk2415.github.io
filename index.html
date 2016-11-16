@@ -1,6 +1,356 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-hello world
+<!--
+       _       _           _       _____           _    __      _ _          _____ _ _       
+      | |     | |         ( )     |  __ \         | |  / _|    | (_)        / ____(_) |      
+      | | ___ | |__  _ __ |/ ___  | |__) |__  _ __| |_| |_ ___ | |_  ___   | (___  _| |_ ___ 
+  _   | |/ _ \| '_ \| '_ \  / __| |  ___/ _ \| '__| __|  _/ _ \| | |/ _ \   \___ \| | __/ _ \
+ | |__| | (_) | | | | | | | \__ \ | |  | (_) | |  | |_| || (_) | | | (_) |  ____) | | ||  __/
+  \____/ \___/|_| |_|_| |_| |___/ |_|   \___/|_|   \__|_| \___/|_|_|\___/  |_____/|_|\__\___|
+                                                                                             
+                                                                                             -->
 
-<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Personal Website and Porfolio of John Ji">
+    <meta name="title" content="John Ji Personal Website"> 
+    <meta name="author" content="Blackhawk">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>John Ji</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Droid+Serif|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="highlight/styles/default.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56312472-5', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <section class="splashPage"> <!--First Section: SpashPage -->
+                    <img src="img/profilepic.jpg" class="img-circle" alt="John Ji"/>
+                <div class="title">
+                    <h2>John Ji</h2>
+                    <h4 id="pText">Financial Analyst</h4>
+                </div>
+                <div class="button-group">
+                    <ul class="buttons">
+                        <li class="vertical-li"><button type="button" id="excelbtn" class="btn btn-success switch" onclick="changeText('Excel Junkie', 'Excel Modeling', 'Sample Excel Models Built from Scratch');">Excel Modeling</button></li>
+                        <li class="vertical-li"><button type="button" id="programmingbtn" class="btn btn-primary switch" onclick="changeText('Programming Enthusiast', 'Development Projects', 'Just some stuff I coded');">Programming</button></li>  
+                        <li class="vertical-li"><button type="button" id="aboutbtn" class="btn btn-warning switch active" onclick="changeText('Minimalist', 'Hello!', ' ');">About</button></li>  
+                    </ul>  
+                </div>  
+                <div class="button-group" style="text-align:center; top:16em;">
+                    <ul class="buttons" style="display:inline-block;">
+                        <li class="horizontal-li"><a href="https://www.linkedin.com/pub/john-ji/32/79a/bb5" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="horizontal-li"><a href="https://github.com/blackhawk2415" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                        <li class="horizontal-li"><a href="https://www.flickr.com/photos/136705544@N08" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                    </ul>
+                </div>          
+            </section>    
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="shrink">
+                        <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-chevron-circle-left"></i></a>
+                    </div>
+                    <div class="col-lg-12">
+                        <h1 id="headingDes">Hello!</h1>
+                        <p id="captionDes"></p>
+               </div>
+                </div>
+
+
+
+<!-- Section Page Content Begins -->
+
+        <!--Excel Modeling Examples -->
+
+                <div class="excel square col-md-11"> <!-- Excel Example 1 -->
+                    <div class="square col-md-6">
+                        <h3>Paper Napkin Forecasting</h3>
+                        <p class="desc">Fast and light weight revenue forecast with dynamic value generation and basic automated error/data checking. Ideal for last minute investor calls or time crunch situations.</p>
+                        <p class="desc"> Keying in baseline assumptions in the dashboard panel makes for fast and accurate model building. Easy to understand UI and can be used by non-technical personnel. </p>
+                        <button data-toggle="modal" data-target="#excelsample1" type="button" class="btn btn-default launchDemo" id="load1">Live Demo</button>
+                    </div>
+                    <div class="square col-md-6 blockpic">
+                        <img class="excelpic" src="img/forecastpic.jpg" alt="Excel Forecasting Model">
+                    </div>
+                </div>
+
+                <div class="excel square moreExcel col-md-11"> <!-- Excel Example 2 -->
+                    <div class="square col-md-6">
+                        <h3>Discounted Cashflow Model</h3>
+                        <p class="desc">Full scale DCF of AT&amp;T Inc. Forecasts assumption balance sheets and income statements, projects FCF and computes WACC. Derives terminal value using exit multiple method and perpetuity/Gordon growth</p>
+                        <p class="desc">Originally made for class project back in college. Production level DCF models available for sampling by request only.</p>
+                        <button data-toggle="modal" data-target="#excelsample2" type="button" class="btn btn-default launchDemo" id="load2">Live Demo</button>
+                    </div>
+                    <div class="square col-md-6 blockpic">
+                        <img class="excelpic" src="img/dcfpic.jpg" alt="Excel DCF Model">
+                    </div>
+                </div>
+
+                <div class="excel square moreExcel col-md-11"> <!-- Excel Example 3 -->
+                    <div class="square col-md-6">
+                        <h3>Real-Time Stock Portfolio Dashboard</h3>
+                        <p class="desc">Porfolio table for select small cap value stocks. Pulls live stock data from Yahoo! Finance API (YQL) using xlwings library and requests module. Written in Python.</p>
+                        <p class="desc">Replaces excel VBA with Python Programming language, leading to more robust and efficient code base.</p>
+                        <button data-toggle="modal" data-target="#excelsample3" type="button" class="btn btn-default launchDemo" id="load3">Live Demo</button>
+                    </div>
+                    <div class="square col-md-6 blockpic">
+                        <img class="excelpic" src="img/stockpic.jpg" alt="Excel Stock Portfolio Model">
+                    </div>
+                </div>
+
+        <!--Programming Examples -->
+
+                <div class="programming square col-md-11"> <!-- Programming Example 1 -->
+                    <div class="square col-md-6">
+                        <a class="projectsite col-md-12" href="http://feedrover.com/" target="_blank" style="font-family: 'Droid Serif', serif;font-weight: bold;font-style: italic;">FeedRover</a>
+                    </div>
+                    <div class="square col-md-6">
+                        <h3>FeedRover</h3>
+                        <p class="desc">FeedRover is a minimalist news aggregator. Get today’s top trending World News headlines in under 30 seconds. No fluff-piece or click-bait article promise.</p>
+                        <p class="desc">Built on Django, served via NGINX and Gunicorn. Individual project.</p>
+                        <a href="http://feedrover.com/" target="_blank" ><button type="button" class="btn btn-default launchDemo">Visit Site</button></a>
+                    </div>
+                </div>
+
+                <div class="programming square moreProgramming col-md-11"> <!-- Programming Example 1 -->
+                    <div class="square col-md-6">
+                        <a class="projectsite col-md-12" href="http://flipbookit.me/" target="_blank" style="font-family: 'Open Sans', sans-serif;">Flipbook</a>
+                    </div>
+                    <div class="square col-md-6">
+                        <h3>Flipbook</h3>
+                        <p class="desc">Flipbook is a company screening and lead generation tool for middle market investment banks and private equity firms. The purpose of this tool is to eliminate unnecessary copy &amp; pasting between your workbook and browser, improving efficiency</p>
+                        <p class="desc">Written in C#, served via IIS7. Co-partnered project. Built front end only.</p>
+                        <a href="http://flipbookit.me/" target="_blank" ><button  type="button" class="btn btn-default launchDemo">Visit Site</button></a>
+                    </div>
+                </div>
+
+                <div class="programming square moreProgramming col-md-11"> <!-- Programming Example 1 -->
+                    <div class="square col-md-6">
+                        <a class="projectsite col-md-12" href="https://github.com/blackhawk2415/professorContact" target="_blank"><i class="fa fa-search fa-2x"></i></a>
+                    </div>
+                    <div class="square col-md-6">
+                        <h3>Email Crawler</h3>
+                        <p class="desc">Web crawler that finds faculty and staff in the IR department of all US universities and inventories their email</p>
+                        <p class="desc">Written in Python, uses Selenium Webdriver, BeautifulSoup and PhantomJS</p>
+                        <a href="https://github.com/blackhawk2415/professorContact" target="_blank"><button type="button" class="btn btn-default launchDemo">Fork the Repo</button></a>
+                    </div>
+                </div>
+
+        <!-- About Section -->
+
+                <div class="about square col-md-8 info">
+                    <p> I'm John, thanks for visiting my porfolio. I like to keep things simple, clean and organized.</p>
+                    <br>
+                    <p> I do a lot of work in excel and I like to program a bit as well on the side. In my free time, I enjoy strumming away on the guitar and being a tourist in my own <a style="color: #4D94FF !important" target="_blank" href="https://www.flickr.com/photos/136705544@N08">city.</a></p>
+                    <br>
+                    <p>I can be reached at <img src="img/email.jpg" alt="(Contact Email Has Been Disabled Available)" style="display:inline;block"/></p>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- javascript loads -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="highlight/styles/default.css"></script>
+    <script src="highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Smooth Scroll Disabled, Reduce Latency
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/smoothScroll.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+
+
+<!-- Modals For Loading Examples -->
+
+    <div class="modal fade" id="excelsample1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document"  style ="width: 92% !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel" style="color:black;font-size:2em;">Paper Napkin Forecasting</h4>
+          </div>
+          <div class="modal-body">
+            <iframe id="example1" class="col-md-12" height="100%" frameborder="0" scrolling="no"></iframe>
+            <div class="col-md-12" style="background-color:white; height: 30px !important; min-width:300px !important; position:relative;top:-30px"></div>
+          </div>
+          <div class="modal-footer" style="border:none;padding:0;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="excelsample2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document"  style ="width: 92% !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel" style="color:black;font-size:2em;">Discounted Cashflow Model</h4>
+          </div>
+          <div class="modal-body">
+            <iframe id="example2" class="col-md-12" height="100%" frameborder="0" scrolling="no"></iframe>
+            <div class="col-md-12" style="background-color:white; height: 30px !important; min-width:300px !important; position:relative;top:-30px"></div>
+          </div>
+          <div class="modal-footer" style="border:none;padding:0;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="excelsample3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document"  style ="width: 92% !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel" style="color:black;font-size:2em;">Real-Time Stock Portfolio Dashboard</h4>
+          </div>
+          <div class="modal-body">
+            <div>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Excel GUI</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Script</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                <iframe id="example3" class="col-md-12" height="100%" frameborder="0" scrolling="no"></iframe>
+                <div class="col-md-12" style="background-color:white; height: 30px !important; min-width:300px !important; position:relative;top:-30px"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="col-md-10 highlight-python highlight" style="padding-top 2px;margin-top:6px">
+                        <pre>
+                        <code class="python">
+                            from xlwings import Workbook, Range
+                            import requests, logging, datetime, time, random, os
+
+
+                            # Initiate Logging
+                            logging.basicConfig(filename='errors.log', level=logging.INFO)
+
+                            # Global Variables
+                            jsonData = {}
+                            outputData = []
+                            now = datetime.datetime.now().strftime("%m-%d-%Y %H:%M")
+
+
+                            # Establish Connection Between Workbook and Python
+
+                            def connect():
+                                wb = Workbook.caller()
+                                Range("Dashboard", "excelData").clear_contents()
+                                logging.critical(now + ": Could not connect with Workbook, check VBA connection (Alt+F11)")
+                                query()
+
+
+                            # Making ReST Query to Yahoo and Retrieving Data
+                            def query():
+                                queryString = ""
+                                counter = 1
+                                stockList = Range('A6:A20').value
+                                # stockList = ["MSFT", "GOOG", "YAHOO"] # Debugging Purposes
+                                for stock in stockList:
+                                    queryString += '"' + str(stock) + '"' + '%2C'
+
+                                queryString = queryString[0:-3]
+                                stringAddon = "store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback="
+                                query = "https://query.yahooapis.com/v1/public/yql?q=select * from yahoo.finance.quotes where symbol in (%s)&format=json&diagnostics=true&env=%s" % (queryString, stringAddon,)
+                                logging.info("ReST Query Made at " + now)
+                                # print query
+                                r = requests.get(query)
+
+                                if r.status_code == 200:
+                                    jsonData = r.json()
+                                    logging.debug(now + "Successful Request Made to Yahoo")
+                                    # print jsonData
+                                else:
+                                    while counter < 5:
+                                        logging.warning(now + ": ReST query failed, check site URL and server status. Attempt #" + counter)
+                                        r = requests.get(query)
+                                        if r.status_code == 200:
+                                            jsonData = r.json()
+                                            break
+                                        counter += 1
+                                        time.sleep(random.randrange(2, int(counter)*5))
+
+
+                                counter = 0 #reset counter
+
+                                logging.info(now + "Began parsing JSON response")
+                                while counter < len(stockList): 
+                                    # Parsing JSON response into actionable data
+                                    stockDataRaw = [
+                                        str(jsonData["query"]["results"]["quote"][counter]["AverageDailyVolume"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["Ask"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["Change"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["BookValue"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["EarningsShare"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["MarketCapitalization"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["EBITDA"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["PERatio"]),
+                                        str(jsonData["query"]["results"]["quote"][counter]["PEGRatio"]),
+                                    ]
+                                    StockData = stockDataRaw
+                                    outputData.append(StockData)
+                                    counter += 1
+
+                                # Writing data to Excel Workbook    
+                                Range("Dashboard", "excelData").value = outputData
+
+
+                            if __name__ == '__main__':
+                                path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'SmallCapValueStocks.xlsm'))
+                                Workbook.set_mock_caller(path)
+                                # query()
+                                connect()
+                        </code>
+                        </pre> 
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="border:none;padding:0;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+</html>
 
